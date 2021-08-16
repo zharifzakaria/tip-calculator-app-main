@@ -1,2 +1,211 @@
-.attribution { font-size: 11px; text-align: center; }
+$strongcyan: hsl(172, 67%, 45%);
+$darkcyan: hsl(183, 100%, 15%);
+$darkgraycyan: hsl(183, 79%, 24%);
+$darkgraycyan2: hsl(184, 14%, 56%);
+$darkgraycyan3: hsl(190, 9%, 63%);
+$lightgraycyan: hsl(185, 41%, 84%);
+$lightgraycyan2: hsl(185, 27%, 56%);
+$lightgraycyan3: hsl(202, 50%, 97%);
+$white: hsl(0, 0%, 100%);
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body {
+    font-family: 'Space Mono', monospace;
+    background-color: $lightgraycyan;
+    font-weight: 700;
+    color: $darkcyan;
+    overflow: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2em;
+
+    h1 {
+        font-size: 25px;
+        letter-spacing: 8px;
+        margin-bottom: 2em;
+    }
+}
+
+.app {
+    border: none;
+    border-radius: 25px;
+    background-color: $white;
+    width:920px;
+    height: 480px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    padding: 32px;
+}
+
+.left {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+
+    .input-row {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        position: relative;
+    
+        button {
+            border: none;
+            background-color: transparent;
+            color: $darkgraycyan3;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            font-size: 24px;
+            transform: translateY(40%);
+        }
+    
+        .input {
+            width: 100%;
+            padding-right: 20px;
+            font-family: 'Space Mono', monospace;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .input {
+        background-color: $lightgraycyan3;
+        color: $darkgraycyan;
+        border: none;
+        height: 48px;
+        font-size: 24px;
+        text-align: right;
+        font-weight: 700;
+    }
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+
+    a {
+        background-color: $darkcyan;
+        color: $white;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 700;
+        font-size: 24px;
+        border:none;
+        border-radius: 5px;
+        position: relative;
+
+        &:last-child {
+            background-color: $lightgraycyan3;
+            color: $darkcyan;
+
+            &:hover {
+                background-color: $lightgraycyan;
+            }
+
+        }
+
+        &:hover {
+            background-color: $lightgraycyan2;
+        }
+
+        input {
+            font-family: 'Space Mono', monospace;
+            position: absolute;
+            top: 0;
+            left:0;
+            width: 100%;
+            font-size: 24px;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            letter-spacing: -1pt;
+
+            &:focus, &:active {outline: none;}
+        }
+    }
+}
+
+.right {
+    background-color: $darkcyan;
+    border-radius: 50px;
+    padding: 60px 40px;
+    color: $white;
+    position: relative;
+
+    .row {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        
+
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        span {
+            display: block;
+            font-weight: 400;
+            font-size: 14px;
+            color: $lightgraycyan2;
+        }
+
+        .amount {
+            height: 120px;
+
+            h1 {
+                font-size: 48px;
+                color: $strongcyan;
+                letter-spacing: .5px;
+            }
+        }
+
+        &:last-child {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            
+            a {
+                text-decoration: none;
+                color: $darkcyan;
+                background-color: $darkgraycyan;
+                width: 100%;
+                padding: 16px;
+                margin: 0 40px;
+                border-radius: 5px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: $lightgraycyan2;
+                }
+            }
+        }
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; margin-top: 2em; }
 .attribution a { color: hsl(228, 45%, 44%); }

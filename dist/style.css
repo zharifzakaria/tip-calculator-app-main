@@ -1,6 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+body {
+  font-family: "Space Mono", monospace;
+  background-color: #c5e4e7;
+  font-weight: 700;
+  color: #00494d;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2em;
+}
+.container h1 {
+  font-size: 25px;
+  letter-spacing: 8px;
+  margin-bottom: 2em;
+}
+
+.app {
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  width: 920px;
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  padding: 32px;
+}
+
+.left {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+}
+.left .input-row {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+}
+.left .input-row button {
+  border: none;
+  background-color: transparent;
+  color: #98a6a9;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 24px;
+  transform: translateY(40%);
+}
+.left .input-row .input {
+  width: 100%;
+  padding-right: 20px;
+  font-family: "Space Mono", monospace;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.row .input {
+  background-color: #f4f8fb;
+  color: #0d696e;
+  border: none;
+  height: 48px;
+  font-size: 24px;
+  text-align: right;
+  font-weight: 700;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 16px;
+  row-gap: 16px;
+}
+.button-group a {
+  background-color: #00494d;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  position: relative;
+}
+.button-group a:last-child {
+  background-color: #f4f8fb;
+  color: #00494d;
+}
+.button-group a:last-child:hover {
+  background-color: #c5e4e7;
+}
+.button-group a:hover {
+  background-color: #71a8ad;
+}
+.button-group a input {
+  font-family: "Space Mono", monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  letter-spacing: -1pt;
+}
+.button-group a input:focus, .button-group a input:active {
+  outline: none;
+}
+
+.right {
+  background-color: #00494d;
+  border-radius: 50px;
+  padding: 60px 40px;
+  color: white;
+  position: relative;
+}
+.right .row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.right .row p {
+  padding: 0;
+  margin: 0;
+}
+.right .row span {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #71a8ad;
+}
+.right .row .amount {
+  height: 120px;
+}
+.right .row .amount h1 {
+  font-size: 48px;
+  color: #26c0ab;
+  letter-spacing: 0.5px;
+}
+.right .row:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+.right .row:last-child a {
+  text-decoration: none;
+  color: #00494d;
+  background-color: #0d696e;
+  width: 100%;
+  padding: 16px;
+  margin: 0 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.right .row:last-child a:hover {
+  background-color: #71a8ad;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 2em;
 }
 
 .attribution a {
