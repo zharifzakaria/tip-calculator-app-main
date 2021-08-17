@@ -34,6 +34,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 32px;
   padding: 32px;
+  box-shadow: 0 1px 2px rgba(0, 73, 77, 0.07), 0 2px 4px rgba(0, 73, 77, 0.07), 0 4px 8px rgba(0, 73, 77, 0.07), 0 8px 16px rgba(0, 73, 77, 0.07), 0 16px 32px rgba(0, 73, 77, 0.07), 0 32px 64px rgba(0, 73, 77, 0.07);
 }
 
 .left {
@@ -69,6 +70,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 .row .input {
   background-color: #f4f8fb;
@@ -80,14 +82,14 @@ body {
   font-weight: 700;
 }
 
-.button-group {
+#button-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   column-gap: 16px;
   row-gap: 16px;
 }
-.button-group a {
+#button-group a {
   background-color: #00494d;
   color: white;
   text-decoration: none;
@@ -97,30 +99,32 @@ body {
   border: none;
   border-radius: 5px;
   position: relative;
+  cursor: pointer;
 }
-.button-group a:last-child {
+#button-group a:last-child {
   background-color: #f4f8fb;
   color: #00494d;
 }
-.button-group a:last-child:hover {
+#button-group a:last-child:hover {
   background-color: #c5e4e7;
 }
-.button-group a:hover {
+#button-group a:hover {
   background-color: #71a8ad;
 }
-.button-group a input {
+#button-group a input {
   font-family: "Space Mono", monospace;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   font-size: 24px;
+  font-weight: bold;
   background-color: transparent;
   border: none;
   text-align: center;
   letter-spacing: -1pt;
 }
-.button-group a input:focus, .button-group a input:active {
+#button-group a input:focus, #button-group a input:active {
   outline: none;
 }
 
@@ -173,7 +177,21 @@ body {
   text-transform: uppercase;
 }
 .right .row:last-child a:hover {
-  background-color: #71a8ad;
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.show {
+  opacity: 1;
+}
+
+.error {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  font-size: 15px;
+  color: #ff5100;
+  display: block;
 }
 
 .attribution {
@@ -182,8 +200,8 @@ body {
   margin-top: 2em;
 }
 
-.attribution a {
-  color: #3e52a3;
+.attribution a, .attribution a:visited {
+  color: #4ac9b8;
 }
 
 /*# sourceMappingURL=style.css.map */

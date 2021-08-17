@@ -21,18 +21,18 @@
         <div class="row">
           <label for="bill">Bill</label>
           <div class="input-row">
-            <button>$</button><input class="input" type="text" name="bill" placeholder="0">
+            <button>$</button><input id="bill" class="input" type="text" name="bill" placeholder="0" onchange="validateBill()">
           </div>
         </div>
 
         <div class="row">
           <p>Select Tip %</p>
-          <div class="button-group">
-            <a href="">5%</a>
-            <a href="">10%</a>
-            <a href="">15%</a>
-            <a href="">25%</a>
-            <a href="">50%</a>
+          <div id="button-group">
+            <a id="tip-1">5%</a>
+            <a id="tip-2">10%</a>
+            <a id="tip-3">15%</a>
+            <a id="tip-4">25%</a>
+            <a id="tip-5">50%</a>
             <a id="custom">Custom</a>
           </div>
         </div>
@@ -40,7 +40,10 @@
         <div class="row">
           <label for="person">Number of People</label>
           <div class="input-row">
-            <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></button><input class="input" type="text" name="person" placeholder="0">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </button>
+            <input id="person" class="input" type="text" name="person" placeholder="0" onchange="validatePersonCount()">
           </div>
         </div>
       
@@ -50,23 +53,23 @@
           <p>Tip Amount
             <span>/ person</span>
           </p>
-          <div class="amount"><h1>$0.00</h1></div>
+          <div id="tipTotal" class="amount"><h1>$0.00</h1></div>
         </div>
         <div class="row">
           <p>Total
             <span>/ person</span>
           </p>
-          <div class="amount"><h1>$0.00</h1></div>
+          <div id="totalPerPerson" class="amount"><h1>$0.00</h1></div>
         </div>
         <div class="row">
-          <a href="">Reset</a>
+          <a href="/">Reset</a>
         </div>
       </div>
     </div>
 
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">zharifzakaria</a>.
     </div>
 
   </div>
