@@ -48,9 +48,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow (whoops! not done yet)
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Vanilla JS
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
